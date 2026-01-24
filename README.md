@@ -127,7 +127,7 @@ SkillForge features a **drumming-inspired color palette**:
 ## 🗺 Roadmap
 
 - [x] **Session 1**: Project setup, Hilt DI, theming
-- [ ] **Session 2**: Data models & Room database
+- [x] **Session 2**: Data models & Room database
 - [ ] **Session 3**: Repository layer & DI modules
 - [ ] **Session 4**: Drummer starter pack content
 - [ ] **Session 5**: Home & Dashboard UI
