@@ -2,6 +2,14 @@
 
 This file provides guidance to Claude Code when working with this repository.
 
+## Teaching Mode
+
+**This is a teaching/learning project.** Claude should:
+- Guide step-by-step, explaining the "why" behind each decision
+- Provide code snippets with explanations
+- Let the user create files, folders, packages, and type the code themselves
+- Act as a tutor, not an auto-coder
+
 ## Project Overview
 
 SkillForgeAI is an on-device ML-powered learning progression app built with Kotlin and Jetpack Compose. Users create skills, study flashcards, and progress through Bloom's Taxonomy levels (Remember → Understand → Apply → Analyze → Evaluate → Create) based on AI-driven recommendations.
@@ -118,7 +126,7 @@ SkillForgeAI is an on-device ML-powered learning progression app built with Kotl
   17 features extracted from user activity:
   - Temporal: daysSinceLastActivity, activitiesLast7Days, streakDays, etc.
   - Performance: averageScoreLast5, scoreTrend, consecutiveFailures, etc.
-  - Level: currentLevelOrdinal, daysAtCurrentLevel, etc.
+  - Level: currentLevelOrdinal,ou a daysAtCurrentLevel, etc.
   - Engagement: completionRate, voluntaryPracticeRatio, etc.
 
   Key Dependencies
@@ -187,27 +195,41 @@ This project is being built as a guided 15-session tutorial. Below is the curren
 | Type Converters + AppDatabase | ✓ Done |
 | Tests: 55 total (16 unit + 39 instrumented) | ✓ All passing |
 
-### Session 3: Repository Layer & DI ← UP NEXT
+### Session 3: Repository Layer & DI ✓
 
 | Task | Status |
 |------|--------|
-| Create SkillRepository interface + impl | Pending |
-| Create FlashcardRepository interface + impl | Pending |
-| Create ActivityRepository interface + impl | Pending |
-| Create ProgressRepository interface + impl | Pending |
-| Create DatabaseModule.kt (provides Room) | Pending |
-| Create RepositoryModule.kt (binds implementations) | Pending |
-| Checkpoint: Inject repository into test ViewModel | Pending |
+| Create SkillRepository interface + impl | ✓ Done |
+| Create FlashcardRepository interface + impl | ✓ Done |
+| Create ActivityRepository interface + impl | ✓ Done |
+| Create ProgressRepository interface + impl | ✓ Done |
+| Create DatabaseModule.kt (provides Room) | ✓ Done |
+| Create RepositoryModule.kt (binds implementations) | ✓ Done |
+| Repository tests (26 new instrumented tests) | ✓ All passing |
+| Tests: 64 total instrumented | ✓ All passing |
 
-**Concepts to learn:**
-- Why repositories wrap DAOs (abstraction)
+**Concepts learned:**
+- Why repositories wrap DAOs (abstraction, testability, flexibility)
 - Hilt `@Module`, `@Provides`, `@Binds`
 - `@Singleton` scope
 - Interface vs implementation separation
+- `@InstallIn(SingletonComponent::class)` for app-lifetime dependencies
 
-### Sessions 4-15: Remaining
+### Session 4: Drummer Starter Pack & Content Seeding ← UP NEXT
 
-4. Drummer Starter Pack & Content Seeding
+| Task | Status |
+|------|--------|
+| Create DrummerStarterContent.kt with flashcard data | Pending |
+| Create ContentSeeder.kt to populate database | Pending |
+| Add seeding to app startup (via Hilt) | Pending |
+| Checkpoint: App launches with pre-loaded drumming skill | Pending |
+
+**Concepts to learn:**
+- Database seeding strategies
+- Hilt `@Inject` with application lifecycle
+- Asset loading and content initialization
+
+### Sessions 5-15: Remaining
 5. Home & Dashboard UI
 6. Flashcard System
 7. Activity Tracking
