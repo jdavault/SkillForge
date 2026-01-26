@@ -158,3 +158,64 @@ SkillForgeAI is an on-device ML-powered learning progression app built with Kotl
   - Use @VisibleForTesting for test-only accessors
   - Prefer StateFlow over LiveData for new code
 
+---
+
+## Tutorial Progress
+
+This project is being built as a guided 15-session tutorial. Below is the current progress.
+
+### Session 1: Project Setup & Theming ✓
+
+| Task | Status |
+|------|--------|
+| New Android project "SkillForge" | ✓ Done |
+| build.gradle.kts with Hilt + KSP | ✓ Done |
+| CLAUDE.md with project instructions | ✓ Done |
+| SkillForgeApplication.kt with @HiltAndroidApp | ✓ Done |
+| MainActivity with @AndroidEntryPoint | ✓ Done |
+| Drumming-inspired theme (crimson, amber, charcoal) | ✓ Done |
+| Checkpoint: App shows "SkillForge" with themed UI | ✓ Done |
+
+### Session 2: Data Models & Room Database ✓
+
+| Task | Status |
+|------|--------|
+| Room dependencies in version catalog | ✓ Done |
+| LearningLevel enum (Bloom's Taxonomy) | ✓ Done |
+| Skill, Flashcard, Activity, UserProgress entities | ✓ Done |
+| SkillDao, FlashcardDao, ActivityDao, ProgressDao | ✓ Done |
+| Type Converters + AppDatabase | ✓ Done |
+| Tests: 55 total (16 unit + 39 instrumented) | ✓ All passing |
+
+### Session 3: Repository Layer & DI ← UP NEXT
+
+| Task | Status |
+|------|--------|
+| Create SkillRepository interface + impl | Pending |
+| Create FlashcardRepository interface + impl | Pending |
+| Create ActivityRepository interface + impl | Pending |
+| Create ProgressRepository interface + impl | Pending |
+| Create DatabaseModule.kt (provides Room) | Pending |
+| Create RepositoryModule.kt (binds implementations) | Pending |
+| Checkpoint: Inject repository into test ViewModel | Pending |
+
+**Concepts to learn:**
+- Why repositories wrap DAOs (abstraction)
+- Hilt `@Module`, `@Provides`, `@Binds`
+- `@Singleton` scope
+- Interface vs implementation separation
+
+### Sessions 4-15: Remaining
+
+4. Drummer Starter Pack & Content Seeding
+5. Home & Dashboard UI
+6. Flashcard System
+7. Activity Tracking
+8. Progression Engine (Rules-Based)
+9. ML Infrastructure
+10. Feature Engineering
+11. Train & Export TFLite Model
+12. ML Integration & Hybrid Engine
+13. Recommendations UI
+14. Polish & UX
+15. Testing & Wrap-up
