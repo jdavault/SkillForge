@@ -18,6 +18,7 @@ interface SkillRepository {
     suspend fun update(skill: Skill)
     suspend fun delete(skill: Skill)
     suspend fun archive(skillId: Long)
+    suspend fun getCount(): Int
 }
 
 /**
@@ -41,4 +42,6 @@ class SkillRepositoryImpl @Inject constructor(
     override suspend fun delete(skill: Skill) = skillDao.delete(skill)
 
     override suspend fun archive(skillId: Long) = skillDao.archive(skillId)
+
+    override suspend fun getCount(): Int = skillDao.getCount()
 }

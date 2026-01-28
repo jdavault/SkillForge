@@ -20,6 +20,9 @@ interface SkillDao {
     @Query("SELECT * FROM skills WHERE id = :skillId")
     suspend fun getById(skillId: Long): Skill?
 
+    @Query("SELECT COUNT(*) FROM skills")
+    suspend fun getCount(): Int
+
     @Insert
     suspend fun insert(skill: Skill): Long
 

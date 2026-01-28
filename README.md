@@ -120,7 +120,11 @@ SkillForge features a **drumming-inspired color palette**:
 
 ## 📱 Screenshots
 
-*Coming soon...*
+  <table>
+    <tr>
+      <td><img src="images/home_screen.png" alt="Home Screen" width="250"/></td>
+    </tr>
+  </table>
 
 ---
 
@@ -128,9 +132,9 @@ SkillForge features a **drumming-inspired color palette**:
 
 - [x] **Session 1**: Project setup, Hilt DI, theming
 - [x] **Session 2**: Data models & Room database
-- [ ] **Session 3**: Repository layer & DI modules
-- [ ] **Session 4**: Drummer starter pack content
-- [ ] **Session 5**: Home & Dashboard UI
+- [x] **Session 3**: Repository layer & DI modules
+- [x] **Session 4**: Drummer starter pack content
+- [x] **Session 5**: Home & Dashboard UI
 - [ ] **Session 6**: Flashcard system
 - [ ] **Session 7**: Activity tracking
 - [ ] **Session 8**: Progression engine (rules-based)

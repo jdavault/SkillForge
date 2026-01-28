@@ -215,23 +215,57 @@ This project is being built as a guided 15-session tutorial. Below is the curren
 - Interface vs implementation separation
 - `@InstallIn(SingletonComponent::class)` for app-lifetime dependencies
 
-### Session 4: Drummer Starter Pack & Content Seeding ← UP NEXT
+### Session 4: Drummer Starter Pack & Content Seeding ✓
 
 | Task | Status |
 |------|--------|
-| Create DrummerStarterContent.kt with flashcard data | Pending |
-| Create ContentSeeder.kt to populate database | Pending |
-| Add seeding to app startup (via Hilt) | Pending |
-| Checkpoint: App launches with pre-loaded drumming skill | Pending |
+| Create DrummerStarterContent.kt with flashcard data | ✓ Done |
+| Create ContentSeeder.kt to populate database | ✓ Done |
+| Add seeding to app startup (via Hilt) | ✓ Done |
+| Checkpoint: App launches with pre-loaded drumming skill | ✓ Done |
+
+**Concepts learned:**
+- Database seeding strategies (check-then-insert pattern)
+- Kotlin `object` for static singleton data
+- `@Inject lateinit var` for field injection in Android-managed classes
+- `CoroutineScope(Dispatchers.IO)` for off-main-thread startup work
+- Separating content definition from persistence (FlashcardData vs Flashcard)
+
+### Session 5: Home & Dashboard UI ✓
+
+| Task | Status |
+|------|--------|
+| Add hilt-navigation-compose + lifecycle-runtime-compose deps | ✓ Done |
+| Create HomeViewModel with combined skill + progress state | ✓ Done |
+| Create SkillCard reusable composable component | ✓ Done |
+| Create HomeScreen with loading/empty/content states | ✓ Done |
+| Wire HomeScreen into MainActivity | ✓ Done |
+| Checkpoint: App shows dashboard with seeded drumming skill | ✓ Done |
+
+**Concepts learned:**
+- `@HiltViewModel` + `@Inject constructor` for ViewModel DI
+- `StateFlow` + `combine` to merge multiple data sources
+- `collectAsStateWithLifecycle()` for lifecycle-aware observation
+- `LazyColumn` with `key` for efficient lists
+- `when` pattern for handling UI states (loading/empty/content)
+- Separating reusable components from screens
+
+### Session 6: Flashcard System ← UP NEXT
+
+| Task | Status |
+|------|--------|
+| Create FlashcardStudyViewModel | Pending |
+| Create flashcard flip UI with animation | Pending |
+| Add scoring and answer tracking | Pending |
+| Navigate from HomeScreen to study session | Pending |
+| Checkpoint: User can study flashcards and record scores | Pending |
 
 **Concepts to learn:**
-- Database seeding strategies
-- Hilt `@Inject` with application lifecycle
-- Asset loading and content initialization
+- Compose navigation between screens
+- Compose animations (card flip)
+- User interaction and state management in ViewModels
 
-### Sessions 5-15: Remaining
-5. Home & Dashboard UI
-6. Flashcard System
+### Sessions 7-15: Remaining
 7. Activity Tracking
 8. Progression Engine (Rules-Based)
 9. ML Infrastructure
