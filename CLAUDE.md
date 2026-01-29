@@ -250,23 +250,44 @@ This project is being built as a guided 15-session tutorial. Below is the curren
 - `when` pattern for handling UI states (loading/empty/content)
 - Separating reusable components from screens
 
-### Session 6: Flashcard System ← UP NEXT
+### Session 6: Flashcard System ✓
 
 | Task | Status |
 |------|--------|
-| Create FlashcardStudyViewModel | Pending |
-| Create flashcard flip UI with animation | Pending |
-| Add scoring and answer tracking | Pending |
-| Navigate from HomeScreen to study session | Pending |
-| Checkpoint: User can study flashcards and record scores | Pending |
+| Add navigation-compose dependency | ✓ Done |
+| Create FlashcardStudyViewModel with session state | ✓ Done |
+| Create FlashcardScreen with 3D flip animation | ✓ Done |
+| Add scoring UI (correct/incorrect buttons) | ✓ Done |
+| Create session completion screen with stats | ✓ Done |
+| Set up Compose Navigation (NavHost, routes) | ✓ Done |
+| Navigate from HomeScreen to study session | ✓ Done |
+| Checkpoint: User can study flashcards and record scores | ✓ Done |
+
+**Concepts learned:**
+- Compose Navigation: `NavHost`, `NavController`, route parameters
+- `SavedStateHandle` to receive navigation arguments in ViewModels
+- `animateFloatAsState` for smooth animations
+- `graphicsLayer { rotationY }` for 3D card flip effect
+- `cameraDistance` to prevent distortion during rotation
+- Counter-rotating content so text reads correctly when flipped
+- `MutableStateFlow` for user-interaction-driven state management
+
+### Session 7: Activity Tracking ← UP NEXT
+
+| Task | Status |
+|------|--------|
+| Record Activity on flashcard answer | Pending |
+| Update UserProgress after study session | Pending |
+| Add streak tracking logic | Pending |
+| Show activity stats on HomeScreen | Pending |
+| Checkpoint: App tracks and displays user activity | Pending |
 
 **Concepts to learn:**
-- Compose navigation between screens
-- Compose animations (card flip)
-- User interaction and state management in ViewModels
+- Recording user activity to database
+- Updating progress metrics
+- Date/time handling for streaks
 
-### Sessions 7-15: Remaining
-7. Activity Tracking
+### Sessions 8-15: Remaining
 8. Progression Engine (Rules-Based)
 9. ML Infrastructure
 10. Feature Engineering

@@ -2,7 +2,9 @@
 
 **Master any skill, one level at a time.**
 
-SkillForge is an on-device ML-powered learning progression app built with Kotlin and Jetpack Compose. Users create skills, study flashcards, and progress through Bloom's Taxonomy levels based on AI-driven recommendations.
+SkillForge is an on-device ML-powered learning progression app built with Kotlin and Jetpack
+Compose. Users create skills, study flashcards, and progress through Bloom's Taxonomy levels based
+on AI-driven recommendations.
 
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg)](https://kotlinlang.org)
@@ -13,18 +15,20 @@ SkillForge is an on-device ML-powered learning progression app built with Kotlin
 
 ## 📖 Overview
 
-SkillForge helps learners progress through **Bloom's Taxonomy** - a proven educational framework that structures learning from basic recall to creative mastery:
+SkillForge helps learners progress through **Bloom's Taxonomy** - a proven educational framework
+that structures learning from basic recall to creative mastery:
 
-| Level | Description | Example (Drumming) |
-|-------|-------------|-------------------|
-| 🟣 **Remember** | Recall facts and basic concepts | "What is a paradiddle?" |
-| 🔵 **Understand** | Explain ideas and concepts | "Why start rudiments at 60 BPM?" |
-| 🟢 **Apply** | Use information in new situations | "Play a paradiddle for 2 minutes" |
-| 🟡 **Analyze** | Draw connections among ideas | "Compare flam vs drag technique" |
-| 🟠 **Evaluate** | Justify a decision or course of action | "When to use matched vs traditional grip?" |
-| 🔴 **Create** | Produce new or original work | "Compose an 8-bar fill using 3 rudiments" |
+| Level             | Description                            | Example (Drumming)                         |
+|-------------------|----------------------------------------|--------------------------------------------|
+| 🟣 **Remember**   | Recall facts and basic concepts        | "What is a paradiddle?"                    |
+| 🔵 **Understand** | Explain ideas and concepts             | "Why start rudiments at 60 BPM?"           |
+| 🟢 **Apply**      | Use information in new situations      | "Play a paradiddle for 2 minutes"          |
+| 🟡 **Analyze**    | Draw connections among ideas           | "Compare flam vs drag technique"           |
+| 🟠 **Evaluate**   | Justify a decision or course of action | "When to use matched vs traditional grip?" |
+| 🔴 **Create**     | Produce new or original work           | "Compose an 8-bar fill using 3 rudiments"  |
 
-The app uses **on-device machine learning** to analyze your practice patterns and recommend personalized next steps—all without sending your data to the cloud.
+The app uses **on-device machine learning** to analyze your practice patterns and recommend
+personalized next steps—all without sending your data to the cloud.
 
 ---
 
@@ -41,17 +45,17 @@ The app uses **on-device machine learning** to analyze your practice patterns an
 
 ## 🛠 Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Language** | Kotlin |
-| **UI Framework** | Jetpack Compose + Material 3 |
-| **Architecture** | MVVM + Clean Architecture |
-| **Dependency Injection** | Hilt |
-| **Database** | Room |
-| **ML Runtime** | TensorFlow Lite |
-| **Async** | Kotlin Coroutines + Flow |
-| **Min SDK** | 26 (Android 8.0) |
-| **Target SDK** | 36 |
+| Category                 | Technology                   |
+|--------------------------|------------------------------|
+| **Language**             | Kotlin                       |
+| **UI Framework**         | Jetpack Compose + Material 3 |
+| **Architecture**         | MVVM + Clean Architecture    |
+| **Dependency Injection** | Hilt                         |
+| **Database**             | Room                         |
+| **ML Runtime**           | TensorFlow Lite              |
+| **Async**                | Kotlin Coroutines + Flow     |
+| **Min SDK**              | 26 (Android 8.0)             |
+| **Target SDK**           | 36                           |
 
 ---
 
@@ -110,11 +114,11 @@ cd SkillForge
 
 SkillForge features a **drumming-inspired color palette**:
 
-| Color | Light Mode | Dark Mode | Usage |
-|-------|-----------|-----------|-------|
-| **Crimson** | `#B71C1C` | `#EF5350` | Primary actions |
-| **Amber** | `#FF8F00` | `#FFCA28` | Secondary elements |
-| **Charcoal** | `#37474F` | `#90A4AE` | Tertiary accents |
+| Color        | Light Mode | Dark Mode | Usage              |
+|--------------|------------|-----------|--------------------|
+| **Crimson**  | `#B71C1C`  | `#EF5350` | Primary actions    |
+| **Amber**    | `#FF8F00`  | `#FFCA28` | Secondary elements |
+| **Charcoal** | `#37474F`  | `#90A4AE` | Tertiary accents   |
 
 ---
 
@@ -123,6 +127,8 @@ SkillForge features a **drumming-inspired color palette**:
   <table>
     <tr>
       <td><img src="images/home_screen.png" alt="Home Screen" width="250"/></td>
+      <td><img src="images/flash_card_front.png" alt="Flashcard (front)" width="250"/></td>
+      <td><img src="images/flash_card_back.png" alt="Flashcard (back)" width="250"/></td>
     </tr>
   </table>
 
@@ -135,7 +141,7 @@ SkillForge features a **drumming-inspired color palette**:
 - [x] **Session 3**: Repository layer & DI modules
 - [x] **Session 4**: Drummer starter pack content
 - [x] **Session 5**: Home & Dashboard UI
-- [ ] **Session 6**: Flashcard system
+- [x] **Session 6**: Flashcard system
 - [ ] **Session 7**: Activity tracking
 - [ ] **Session 8**: Progression engine (rules-based)
 - [ ] **Session 9**: ML infrastructure

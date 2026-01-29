@@ -31,6 +31,7 @@ import com.example.skillforge.ui.viewmodel.HomeViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
+    onSkillClick: (Long) -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -62,6 +63,7 @@ fun HomeScreen(
                     CircularProgressIndicator()
                 }
             }
+
             uiState.skills.isEmpty() -> {
                 Box(
                     modifier = Modifier
@@ -84,6 +86,7 @@ fun HomeScreen(
                     }
                 }
             }
+
             else -> {
                 LazyColumn(
                     modifier = Modifier
@@ -96,7 +99,10 @@ fun HomeScreen(
                         items = uiState.skills,
                         key = { it.skill.id }
                     ) { skillWithProgress ->
-                        SkillCard(skillWithProgress = skillWithProgress)
+                        SkillCard(
+                            skillWithProgress = skillWithProgress,
+                            onClick = { onSkillClick(skillWithProgress.skill.id) }
+                        )
                     }
                 }
             }
